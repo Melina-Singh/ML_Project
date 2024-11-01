@@ -53,7 +53,8 @@ class ModelTrainer:
                 "Linear Regression": {
 
                     # 'alpha': [0.01, 0.1, 1.0, 10.0],
-                    # 'fit_intercept': [True, False],
+                    'fit_intercept': [True, False],
+                    'normalize': [True, False] 
                 },
                 "K-Neighbors Regression": {
                     'n_neighbors': [3, 5, 7, 9],
