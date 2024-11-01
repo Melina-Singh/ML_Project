@@ -1,1 +1,1 @@
-## MAchine Learning Project
+## Student Information Portal
