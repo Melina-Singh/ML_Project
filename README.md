@@ -7,7 +7,7 @@
 ![Flask](https://img.shields.io/badge/Flask-2.0.0-blue?style=for-the-badge&logo=flask&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5&logoColor=white)
 
-
+ 
 
 ## Overview
 This project aims to predict students' mathematics scores based on various factors influencing their performance. By analyzing data related to students' academic performance, parental education levels, meal consumption, writing and reading scores, and whether or not they have received tuition, we employ machine learning techniques to build a predictive model. 
