@@ -1,0 +1,50 @@
+# This workflow will build the Docker image and run tests
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Docker CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Stop and remove existing Docker container (if it exists)
+      run: |
+        if [ "$(docker ps -q -f name=my-running-app)" ]; then
+          docker stop my-running-app
+          docker rm my-running-app
+        fi
+
+    - name: Build Docker image
+      run: |
+        docker build -t my-python-app .
+
+    - name: Run Docker container
+      run: |
+        docker run -d --name my-running-app -p 5000:5000 my-python-app
+
+    - name: Run tests in Docker
+      run: |
+        docker exec my-running-app pytest
+
+    - name: Lint with flake8 in Docker
+      run: |
+        docker exec my-running-app flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        docker exec my-running-app flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Stop and remove Docker container
+      run: |
+        docker stop my-running-app
+        docker rm my-running-app
