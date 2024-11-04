@@ -112,7 +112,8 @@ The CI/CD workflow is activated by pushes or pull requests to the main branch. I
 A Simple Portal made by html 
 
 ![Screenshot 2024-11-04 190039](https://github.com/user-attachments/assets/74f10a55-6824-400f-90be-343d9a46a553) ![Screenshot 2024-11-04 190105](https://github.com/user-attachments/assets/c701afbb-dc37-4073-bbb7-752c41d3a227)
-![Screenshot 2024-11-04 190150](https://github.com/user-attachments/assets/567b8334-1810-4466-a6ce-d6fbf677548f)
+
+![Screenshot 2024-11-04 200041](https://github.com/user-attachments/assets/9a98959e-b1ee-4496-bf0e-6a47bb12eaf4) ![Screenshot 2024-11-04 200053](https://github.com/user-attachments/assets/57edfe66-9de8-4ee5-a345-b1049115658e)
 
 
 
